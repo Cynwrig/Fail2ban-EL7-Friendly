@@ -1,0 +1,10 @@
+---
+
+- name: Installing packages
+  yum: >
+    pkg={{ item }}
+    state=installed
+  with_items:
+    - python-netaddr 
+  tags:
+    - python-netaddr be
